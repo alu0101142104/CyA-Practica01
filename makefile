@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -std=c++17 -g -Wall
 
-F0  = cliente
+F0  = p01_strings
 F1  = simbolos
 F2  = alfabetos
 F3  = cadenas

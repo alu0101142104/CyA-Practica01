@@ -7,12 +7,10 @@
 // Autor: Enrique Álvarez Mesa
 // Correo: alu0101142104@ull.es
 // Fecha: 04/10/2022
-// Archivo cya-P01-Strings.cc: programa cliente.
-//    
-// Referencias:
-// Enlaces de interés
-//
-// Historial de revisiones
+// Archivo  p01_strings.cc: programa cliente.
+//    Contiene la función main del proyecto, además de otras funciones para 
+//    el procesamiento de los datos de entrada y salida, además de otras 
+//    comprobaciones.
 
 #include <iostream>
 #include <vector>

@@ -1,3 +1,15 @@
+// Universidad de La Laguna
+// Escuela Superior de Ingeniería y Tecnología
+// Grado en Ingeniería Informática
+// Asignatura: Computabilidad y Algoritmia
+// Curso: 2º
+// Práctica 1: Símbolos, alfabetos y cadenas
+// Autor: Enrique Álvarez Mesa
+// Correo: alu0101142104@ull.es
+// Fecha: 04/10/2022
+// Archivo  alfabetos.h: cabecera de la clase Alfabeto.
+//    Contiene las funciones declaradas para la clase Alfabeto.
+
 #include <iostream>
 #include <vector>
 

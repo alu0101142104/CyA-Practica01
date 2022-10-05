@@ -1,3 +1,15 @@
+// Universidad de La Laguna
+// Escuela Superior de Ingeniería y Tecnología
+// Grado en Ingeniería Informática
+// Asignatura: Computabilidad y Algoritmia
+// Curso: 2º
+// Práctica 1: Símbolos, alfabetos y cadenas
+// Autor: Enrique Álvarez Mesa
+// Correo: alu0101142104@ull.es
+// Fecha: 04/10/2022
+// Archivo  cadenas.h: cabecera de la clase Cadena.
+//    Contiene las funciones declaradas para la clase Cadena.
+
 #include <iostream>
 #include <vector>
 
@@ -5,6 +17,8 @@
 #include "alfabetos.h"
 
 #pragma once
+
+const std::string VACIA = "&";
 
 class Cadena {
   public:
@@ -20,6 +34,7 @@ class Cadena {
     std::vector<Cadena> Sufijos();
     std::vector<Cadena> Subcadenas();
 
+    void InsartarCadenaVacia(std::vector<Cadena>& cadenas);
     std::vector<Simbolo> GetCadena();
     bool CompruebaRepetidos(std::vector<Simbolo>& subcadena, std::vector<Cadena>& subcadenas);
 

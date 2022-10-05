@@ -1,3 +1,15 @@
+// Universidad de La Laguna
+// Escuela Superior de Ingeniería y Tecnología
+// Grado en Ingeniería Informática
+// Asignatura: Computabilidad y Algoritmia
+// Curso: 2º
+// Práctica 1: Símbolos, alfabetos y cadenas
+// Autor: Enrique Álvarez Mesa
+// Correo: alu0101142104@ull.es
+// Fecha: 04/10/2022
+// Archivo  cadenas.cc: funciones de la clase Cadena.
+//    Contiene las funciones implementadas para la clase Cadena.
+
 #include "cadenas.h"
 
 // Cosntructor por defecto
@@ -39,6 +51,7 @@ Cadena Cadena::Inversa() {
 // Calcula los prefijos de la cadena
 std::vector<Cadena> Cadena::Prefijos() {
   std::vector<Cadena> prefijos;
+  InsartarCadenaVacia(prefijos);
   for (unsigned int index = 0; index < cadena_.size(); index++) {
     std::vector<Simbolo> prefijo;
     for (unsigned int index2 = 0; index2 <= index; index2++) {
@@ -53,6 +66,7 @@ std::vector<Cadena> Cadena::Prefijos() {
 // Calcula los sufijos de la cadena
 std::vector<Cadena> Cadena::Sufijos() {
   std::vector<Cadena> sufijos;
+  InsartarCadenaVacia(sufijos);
   for (unsigned int index = cadena_.size(); index > 0; index--) {
     std::vector<Simbolo> sufijo;
     for (unsigned int index2 = index - 1; index2 < cadena_.size(); index2++) {
@@ -67,6 +81,7 @@ std::vector<Cadena> Cadena::Sufijos() {
 // Calcula las subcadenas de la cadena
 std::vector<Cadena> Cadena::Subcadenas() {
   std::vector<Cadena> subcadenas;
+  InsartarCadenaVacia(subcadenas);
   for (unsigned int index = 0; index < cadena_.size(); index++) {
     for (unsigned int index2 = index; index2 < cadena_.size(); index2++) {
       std::vector<Simbolo> subcadena;
@@ -81,6 +96,14 @@ std::vector<Cadena> Cadena::Subcadenas() {
   }
 
   return subcadenas;
+}
+
+// Inserta una cadena vacia en el vector de cadenas de las operaciones
+void Cadena::InsartarCadenaVacia(std::vector<Cadena>& cadenas) {
+  Simbolo simbolo_vacio(VACIA);
+  Cadena Cadena_vacia;
+  Cadena_vacia.InsertarSimbolo(simbolo_vacio);
+  cadenas.push_back(Cadena_vacia);
 }
 
 // Devuelve la cadena
